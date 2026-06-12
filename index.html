@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Amma ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <canvas id="animationCanvas"></canvas>
+
+    <audio id="bgMusic" loop>
+        <source src="music/birthday.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="entrance-lock" class="gate-overlay">
+        <div class="gate-content glass-card">
+            <h1 class="gate-title">Amma, Neekosam Oka Chinna Surprise... 💖</h1>
+            <p class="gate-subtitle">Website start cheyyadaniki kindha unna button click cheyyi Amma.</p>
+            <button class="btn gold-btn large-btn" onclick="unlockExperience()">Open the Surprise ✨</button>
+        </div>
+    </div>
+
+    <section id="hero" class="section">
+        <div class="slideshow-container">
+            <div class="slide active" style="background-image: url('images/amma1.jpg');"></div>
+            <div class="slide" style="background-image: url('images/amma2.jpg');"></div>
+            <div class="slide" style="background-image: url('images/amma3.jpg');"></div>
+            <div class="slide" style="background-image: url('images/amma4.jpg');"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="animate-title">Happy Birthday Amma ❤️</h1>
+            <p id="hero-typing"></p>
+            <button class="btn gold-btn" onclick="scrollToSection('special')">Start the Surprise</button>
+        </div>
+    </section>
+
+    <section id="special" class="section reveal">
+        <div class="container">
+            <h2 class="section-title">Why My Amma Is Special</h2>
+            <p class="section-instructions">Amma, ee cards paina click chesi open cheyyi! ✨</p>
+            <div class="interactive-mystery-grid">
+                <div class="gift-box-card glass-card" onclick="openMysteryBox(this, '🌸 All-Time Favourite: Singing!', 'Nee gonthu nenu vine infinite loops lo continuous transformation vector absolute peace Amma. Sangeetham ante nuvve, nee pata naa pranam! ❤️', '🎤🎵✨')">
+                    <div class="box-cover"><h3>Click Open 🎁</h3></div>
+                    <div class="box-reveal-interior"></div>
+                </div>
+                <div class="gift-box-card glass-card" onclick="openMysteryBox(this, '💖 My Biggest Supporter', 'Nenu ye paristithi lo unna, lokam antha eduririnaa, naa venuka unde oke oka dhairyam nuvvu Amma. You are my absolute background.', '🛡️👑💪')">
+                    <div class="box-cover"><h3>Click Open 🎁</h3></div>
+                    <div class="box-reveal-interior"></div>
+                </div>
+                <div class="gift-box-card glass-card" onclick="openMysteryBox(this, '✨ Favourite Activity: Anchoring', 'Stage meedha nee confidence, matala siri, andhari hrudayalanu aakattukune nee talent chusthe naku chala proud ga untundhi Amma! 🎙️', '🎙️🌟👏')">
+                    <div class="box-cover"><h3>Click Open 🎁</h3></div>
+                    <div class="box-reveal-interior"></div>
+                </div>
+                <div class="gift-box-card glass-card" onclick="openMysteryBox(this, '🌸 My Inspiration & Strength', 'Enni kashtaalu edhurochinaa navvuthu edhurkune nee gunde dhairyam naku prathiroju adugaduguna mundhuku nadipisthundhi.', '🦸‍♀️🦁🔥')">
+                    <div class="box-cover"><h3>Click Open 🎁</h3></div>
+                    <div class="box-reveal-interior"></div>
+                </div>
+                <div class="gift-box-card glass-card" onclick="openMysteryBox(this, '🍯 Favourite Sweet: Gulabjamun', 'Niku istamaina aa tiyyani Gulabjamun nenu chesi pampistha Amma! Nee chethi vanta lo unde prema prarapancham lo ekkada dorkadhu.', '🥣😋🍬')">
+                    <div class="box-cover"><h3>Click Open 🎁</h3></div>
+                    <div class="box-reveal-interior"></div>
+                </div>
+                <div class="gift-box-card glass-card" onclick="openMysteryBox(this, '💖 My Best Friend', 'Naa manasuloni prati chinna vishayanni dahachukunda cheppukune absolute non-judgmental space nuvve Amma. Love you my BFF!', '👭💞💌')">
+                    <div class="box-cover"><h3>Click Open 🎁</h3></div>
+                    <div class="box-reveal-interior"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section reveal">
+        <div class="container">
+            <h2 class="section-title">Memory Spectrum</h2>
+            <p class="section-instructions">Cards ni swipe cheyyi ledha click chesi deep ga chudu Amma! 📸</p>
+            <div class="deck-wrapper-viewport">
+                <div class="deck-interactive-container">
+                    <div class="stack-card" onclick="expandSpectrum(this, 'Beautiful Snap', 'images/gallery1.jpg')">
+                        <img src="images/gallery1.jpg" alt="Gallery 1">
+                        <div class="stack-caption">Infinite Smiles</div>
+                    </div>
+                    <div class="stack-card" onclick="expandSpectrum(this, 'Grace & Radiance', 'images/gallery2.jpg')">
+                        <img src="images/gallery2.jpg" alt="Gallery 2">
+                        <div class="stack-caption">Pure Heart</div>
+                    </div>
+                    <div class="stack-card" onclick="expandSpectrum(this, 'Unconditional Warmth', 'images/gallery3.jpg')">
+                        <img src="images/gallery3.jpg" alt="Gallery 3">
+                        <div class="stack-caption">Unmatched Love</div>
+                    </div>
+                    <div class="stack-card" onclick="expandSpectrum(this, 'Golden Memories', 'images/gallery4.jpg')">
+                        <img src="images/gallery4.jpg" alt="Gallery 4">
+                        <div class="stack-caption">Timeless Essence</div>
+                    </div>
+                    <div class="stack-card" onclick="expandSpectrum(this, 'Purest Connection', 'images/gallery5.jpg')">
+                        <img src="images/gallery5.jpg" alt="Gallery 5">
+                        <div class="stack-caption">Sweetest Memory</div>
+                    </div>
+                    <div class="stack-card" onclick="expandSpectrum(this, 'Family Core', 'images/gallery6.jpg')">
+                        <img src="images/gallery6.jpg" alt="Gallery 6">
+                        <div class="stack-caption">Boundless Joy</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close-lightbox">&times;</span>
+        <div class="lightbox-content-box" onclick="event.stopPropagation()">
+            <img id="lightbox-img" src="" alt="View">
+            <h3 id="lightbox-title"></h3>
+        </div>
+    </div>
+
+    <section id="letter-section" class="section reveal">
+        <div class="container">
+            <h2 class="section-title">A Letter From My Heart</h2>
+            <div class="envelope-wrapper">
+                <div class="envelope" onclick="openLetter()">
+                    <div class="flap"></div>
+                    <div class="pocket"></div>
+                    <div class="letter glass-card">
+                        <div class="letter-text">
+                            <h3>Na priyamaina AMMA,</h3>
+                            <p>Words can never express how much you mean to me. You are the guiding light in my darkest times, the warmth on cold days, and the pure definition of selfless love.</p>
+                            <p>Thank you for every sacrifice you made, for every tear you wiped away, and for believing in me even when I couldn't believe in myself. You are my greatest strength, my constant support, and the bravest woman I know.</p>
+                            <p>On this beautiful day, I wish you endless happiness, radiant health, and all the love this world can hold. Happy Birthday to the queen of my heart! ❤️</p>
+                            <p class="letter-sign">With all my love forever,</p>
+                            <p class="letter-sign">Yours kuttamma ❤️</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="wishes" class="section reveal">
+        <div class="container">
+            <h2 class="section-title">Wishes For You</h2>
+            <div class="wishes-grid">
+                <div class="sticky-note note-1 transition-item">
+                    <span class="deco-icon">❤️</span>
+                    <p>Happy Birthday Amma ❤️</p>
+                </div>
+                <div class="sticky-note note-2 transition-item">
+                    <span class="deco-icon">🌍</span>
+                    <p>You are my world 🌍</p>
+                </div>
+                <div class="sticky-note note-3 transition-item">
+                    <span class="deco-icon">💕</span>
+                    <p>Love You Forever 💕</p>
+                </div>
+                <div class="sticky-note note-4 transition-item">
+                    <span class="deco-icon">🌸</span>
+                    <p>Stay Happy Always 🌸</p>
+                </div>
+                <div class="sticky-note note-5 transition-item">
+                    <span class="deco-icon">✨</span>
+                    <p>Thank You For Everything ❤️</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cake-cutting-zone" class="section reveal">
+        <div class="container text-center">
+            <h2 class="section-title">Cut Your Birthday Cake Amma! 🎂</h2>
+            <p class="section-instructions">Knife ni click chesi cake ni cut cheyyi Amma! 🔪</p>
+            <div class="cake-cutting-rig-box">
+                <div class="interactive-cake">
+                    <div class="interactive-plate"></div>
+                    <div id="cake-body-sliceable" class="interactive-cake-mass">
+                        <div class="cake-slice-left">
+                            <div class="icing-front"></div>
+                        </div>
+                        <div class="cake-slice-right">
+                            <div class="icing-front"></div>
+                        </div>
+                        <div id="candle-flame-element" class="interactive-flame"></div>
+                        <div class="interactive-candle-stick"></div>
+                    </div>
+                </div>
+                <button id="knife-interaction-element" class="btn active-knife-btn" onclick="executeCakeCutSlice()">🔪 Cut the Cake</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="manifest-gifts-zone" class="section reveal">
+        <div class="container">
+            <h2 class="section-title">A Special Present Box 🎁</h2>
+            <div class="gift-box-wrapper-node">
+                <div id="main-mystery-gift-package" class="gift-box-container-mesh" onclick="unwrapDreamGifts()">
+                    <div class="gift-box-lid-top"></div>
+                    <div class="gift-box-ribbon-bow"></div>
+                    <div class="gift-box-main-body"></div>
+                </div>
+            </div>
+            <div id="manifest-grid-results-container" class="manifestation-reveal-grid">
+                <div class="manifest-reward-card glass-card">
+                    <span class="reward-icon">📱</span>
+                    <h3>Premium iPhone</h3>
+                    <p>The premium iPhone you have always wanted is coming your way very soon!</p>
+                </div>
+                <div class="manifest-reward-card glass-card">
+                    <span class="reward-icon">✈️</span>
+                    <h3>Flight Journey</h3>
+                    <p>Get ready for a majestic flight journey to explore beautiful destinations together!</p>
+                </div>
+                <div class="manifest-reward-card glass-card">
+                    <span class="reward-icon">💼</span>
+                    <h3>My Dream Job</h3>
+                    <p>With your blessings, securing a highly successful career to take care of you like a queen!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline-section" class="section reveal">
+        <div class="container">
+            <h2 class="section-title">Your Journey</h2>
+            <p class="section-instructions">Timeline point paina click chesi aa roju venuka unna madhura gnapakam chudu Amma! 🌸</p>
+            <div class="timeline">
+                <div class="timeline-item left reveal" onclick="openStoryModal('Her Childhood', 'images/childhood.jpg', 'Nee chinnappati innocent rojulu Amma. Ee navve kadha maku taratarala asset balam.', 'Circa 1980s')">
+                    <div class="timeline-content glass-card interactive-node-step">
+                        <img src="images/childhood.jpg" alt="Childhood">
+                        <h3>Her Childhood</h3>
+                        <p>Click to open memory story thread...</p>
+                    </div>
+                </div>
+                <div class="timeline-item right reveal" onclick="openStoryModal('Her Teens', 'images/teens.jpg', 'College and school days loni targeted elegant configuration. Ambitions start ayina timeline.', 'Circa 1990s')">
+                    <div class="timeline-content glass-card interactive-node-step">
+                        <img src="images/teens.jpg" alt="Teens">
+                        <h3>Her Teens</h3>
+                        <p>Click to open memory story thread...</p>
+                    </div>
+                </div>
+                <div class="timeline-item left reveal" onclick="openStoryModal('Her Marriage', 'images/marriage.jpg', 'Nanna to kalisi kotha jeevitham modhalupettina day. Absolute pure classic bond.', 'Wedding Day')">
+                    <div class="timeline-content glass-card interactive-node-step">
+                        <img src="images/marriage.jpg" alt="Marriage">
+                        <h3>Her Marriage</h3>
+                        <p>Click to open memory story thread...</p>
+                    </div>
+                </div>
+                <div class="timeline-item right reveal" onclick="openStoryModal('Her Pregnancy', 'images/pregnancy.jpg', 'Nannu nee garbham lo mosi, lokam loki teeskuraadaniki padina parathasmitam tyagam deep roots.', 'Maternity Timeline')">
+                    <div class="timeline-content glass-card interactive-node-step">
+                        <img src="images/pregnancy.jpg" alt="Pregnancy">
+                        <h3>Her Pregnancy</h3>
+                        <p>Click to open memory story thread...</p>
+                    </div>
+                </div>
+                <div class="timeline-item left reveal" onclick="openStoryModal('With Me', 'images/withme.jpg', 'Nee chethulu pattukuni nenu modhati adugu vesna timeline. Naa complete existence source nuvve.', 'Childhood Peak')">
+                    <div class="timeline-content glass-card interactive-node-step">
+                        <img src="images/withme.jpg" alt="With Me">
+                        <h3>With Me</h3>
+                        <p>Click to open memory story thread...</p>
+                    </div>
+                </div>
+                <div class="timeline-item right reveal" onclick="openStoryModal('Happy Family', 'images/family.jpg', 'Anthaa kalisi unna complete safe heaven absolute shelter configuration. Mana family preme mana pranam.', 'Present Continuum')">
+                    <div class="timeline-content glass-card interactive-node-step">
+                        <img src="images/family.jpg" alt="Happy Family">
+                        <h3>Happy Family</h3>
+                        <p>Click to open memory story thread...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="story-modal" class="lightbox" onclick="closeStoryModal()">
+        <div class="story-modal-box glass-card" onclick="event.stopPropagation()">
+            <span class="close-lightbox" onclick="closeStoryModal()">&times;</span>
+            <img id="story-modal-img" src="" alt="Story Target">
+            <h3 id="story-modal-title"></h3>
+            <span id="story-modal-date" class="story-date-badge"></span>
+            <p id="story-modal-desc"></p>
+        </div>
+    </div>
+
+    <section id="final-surprise" class="section reveal">
+        <div class="container">
+            <h2 class="section-title final-title">Thank You Amma For Everything ❤️</h2>
+            
+            <div class="collage-container">
+                <div class="collage-img item-1"><img src="images/final1.jpg" alt="Final 1"></div>
+                <div class="collage-img item-2"><img src="images/final2.jpg" alt="Final 2"></div>
+                <div class="collage-img item-3"><img src="images/final3.jpg" alt="Final 3"></div>
+                <div class="collage-img item-4"><img src="images/final4.jpg" alt="Final 4"></div>
+            </div>
+
+            <div class="voice-note-player-card glass-card text-center">
+                <h3>🎙️ Idhi Vinu Amma...</h3>
+                <p>Nee kosam ee chinna message. Play button click cheyyi.</p>
+                <div class="custom-voice-controls">
+                    <button class="btn voice-btn" onclick="toggleVoiceNote(this)">▶️ Play Surprise</button>
+                    <audio id="personalVoiceMemo">
+                        <source src="music/voicenote.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+
+            <button class="btn gold-btn large-btn final-blast-trigger-node" onclick="triggerFinalMessage()">Final Surprise Click Cheyyi Amma</button>
+
+            <div id="glowing-message-container" class="glowing-message-modal">
+                <div class="glowing-message-content glass-card">
+                    <span class="close-message" onclick="closeFinalMessage()">&times;</span>
+                    <div class="strong-woman-overlay-graphic">⚡👑✨</div>
+                    <p id="glowing-text"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Made With Endless Love For Amma ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
